@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Kiosco - Energía y Sabor para tu Camino</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 100 80" class="kiosko-icon">
+                            <path d="M 20,50 Q 30,30 50,30 Q 70,30 80,50" stroke="url(#gradient1)" fill="none" stroke-width="3"/>
+                            <path d="M 25,55 Q 30,45 40,45 Q 50,45 50,55" stroke="url(#gradient2)" fill="none" stroke-width="2"/>
+                            <ellipse cx="50" cy="60" rx="35" ry="8" stroke="url(#gradient3)" fill="none" stroke-width="3"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#ffdd00;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff8800;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>El K<span class="orange">i</span>osko</h1>
+                        <p>Energía y Sabor para tu Camino</p>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section id="inicio" class="hero">
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-item active" data-category="tortas">
+                    <div class="carousel-content">
+                        <h2>Tortas Deliciosas</h2>
+                        <p>Preparadas al momento con ingredientes frescos</p>
+                        <button class="btn-primary" onclick="scrollToCategory('tortas')">Ver Menú</button>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="https://images.unsplash.com/photo-1619740455993-9e4e6f6e5d84?w=800" alt="Tortas">
+                    </div>
+                </div>
+                <div class="carousel-item" data-category="hamburguesas">
+                    <div class="carousel-content">
+                        <h2>Hamburguesas Jugosas</h2>
+                        <p>Con papas crujientes y salsas especiales</p>
+                        <button class="btn-primary" onclick="scrollToCategory('hamburguesas')">Ver Menú</button>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="Hamburguesas">
+                    </div>
+                </div>
+                <div class="carousel-item" data-category="enchiladas">
+                    <div class="carousel-content">
+                        <h2>Enchiladas Tradicionales</h2>
+                        <p>Verdes, rojas y con los mejores ingredientes</p>
+                        <button class="btn-primary" onclick="scrollToCategory('enchiladas')">Ver Menú</button>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=800" alt="Enchiladas">
+                    </div>
+                </div>
+                <div class="carousel-item" data-category="chilaquiles">
+                    <div class="carousel-content">
+                        <h2>Chilaquiles Caseros</h2>
+                        <p>El desayuno perfecto para empezar tu día</p>
+                        <button class="btn-primary" onclick="scrollToCategory('chilaquiles')">Ver Menú</button>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="https://images.unsplash.com/photo-1626158048925-07d7dbdd0aa6?w=800" alt="Chilaquiles">
+                    </div>
+                </div>
+                <div class="carousel-item" data-category="bebidas">
+                    <div class="carousel-content">
+                        <h2>Bebidas Calientes</h2>
+                        <p>Café, capuchinos y más para acompañar</p>
+                        <button class="btn-primary" onclick="scrollToCategory('bebidas')">Ver Menú</button>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800" alt="Bebidas">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev">‹</button>
+            <button class="carousel-btn next">›</button>
+            <div class="carousel-indicators"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menú</h2>
+            <p class="section-subtitle">Descubre todos nuestros platillos</p>
+
+            <!-- Tortas -->
+            <div class="menu-category" id="tortas">
+                <h3 class="category-title">Tortas</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1603046891726-36bfd957e197?w=400" alt="Torta Milanesa">
+                        </div>
+                        <div class="card-content">
+                            <h4>Milanesa</h4>
+                            <p class="price">$60.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1625869016774-3a92be2ae2cd?w=400" alt="Pechuga Empanizada">
+                        </div>
+                        <div class="card-content">
+                            <h4>Pechuga Empanizada</h4>
+                            <p class="price">$60.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Torta Salchicha">
+                        </div>
+                        <div class="card-content">
+                            <h4>Salchicha</h4>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400" alt="Torta Jamón">
+                        </div>
+                        <div class="card-content">
+                            <h4>Jamón</h4>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hamburguesas -->
+            <div class="menu-category" id="hamburguesas">
+                <h3 class="category-title">Hamburguesas</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Hamburguesa Sencilla">
+                        </div>
+                        <div class="card-content">
+                            <h4>Hamburguesa Sencilla</h4>
+                            <p class="price">$60.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card featured">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400" alt="Hamburguesa con Papas">
+                        </div>
+                        <div class="card-content">
+                            <h4>Hamburguesa con Papas</h4>
+                            <p class="price">$85.00</p>
+                            <span class="badge">Popular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enchiladas -->
+            <div class="menu-category" id="enchiladas">
+                <h3 class="category-title">Enchiladas</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1617343267888-ce47f8d75e4e?w=400" alt="Enchiladas Verdes con Pollo">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Pollo</h4>
+                            <p class="price">$75.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400" alt="Verdes Pechuga Empanizada">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Pechuga Empanizada</h4>
+                            <p class="price">$85.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1626790680787-de5e9a07bcf2?w=400" alt="Verdes Milanesa">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Milanesa</h4>
+                            <p class="price">$85.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chilaquiles -->
+            <div class="menu-category" id="chilaquiles">
+                <h3 class="category-title">Chilaquiles</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1626158048925-07d7dbdd0aa6?w=400" alt="Chilaquiles Verdes Pollo">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Pollo</h4>
+                            <p class="price">$75.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400" alt="Chilaquiles Pechuga">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Pechuga Empanizada</h4>
+                            <p class="price">$85.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1606314826940-d27d6d11369e?w=400" alt="Chilaquiles Milanesa">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Milanesa</h4>
+                            <p class="price">$85.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1617343326116-09e3c8c4aec1?w=400" alt="Chilaquiles Pechuga Asada">
+                        </div>
+                        <div class="card-content">
+                            <h4>Verdes c/ Pechuga Asada</h4>
+                            <p class="price">$85.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sandwiches -->
+            <div class="menu-category" id="sandwiches">
+                <h3 class="category-title">Sandwiches</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400" alt="Sandwich Jamón">
+                        </div>
+                        <div class="card-content">
+                            <h4>Jamón</h4>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=400" alt="Sandwich Salchicha">
+                        </div>
+                        <div class="card-content">
+                            <h4>Salchicha</h4>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1619096252214-ef06c45683e3?w=400" alt="Sandwich Queso Panela">
+                        </div>
+                        <div class="card-content">
+                            <h4>Queso Panela</h4>
+                            <p class="price">$50.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400" alt="Sandwich Atún">
+                        </div>
+                        <div class="card-content">
+                            <h4>Atún</h4>
+                            <p class="price">$50.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tacos Dorados -->
+            <div class="menu-category" id="tacos">
+                <h3 class="category-title">Tacos Dorados</h3>
+                <div class="menu-grid-single">
+                    <div class="menu-card featured">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400" alt="Tacos Dorados">
+                        </div>
+                        <div class="card-content">
+                            <h4>Orden de 3 Tacos Dorados</h4>
+                            <p class="description">Acompañados de arroz</p>
+                            <p class="price">$65.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bebidas -->
+            <div class="menu-category" id="bebidas">
+                <h3 class="category-title">Bebidas</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400" alt="Café Espresso">
+                        </div>
+                        <div class="card-content">
+                            <h4>Café Espresso</h4>
+                            <p class="price">$30.00</p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Café Americano">
+                        </div>
+                        <div class="card-content">
+                            <h4>Café Americano</h4>
+                            <p class="size-options">
+                                <span>12 Oz: $30.00</span>
+                                <span>16 Oz: $45.00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400" alt="Capuchino">
+                        </div>
+                        <div class="card-content">
+                            <h4>Capuchino</h4>
+                            <p class="size-options">
+                                <span>12 Oz: $45.00</span>
+                                <span>16 Oz: $55.00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400" alt="Latte">
+                        </div>
+                        <div class="card-content">
+                            <h4>Latte</h4>
+                            <p class="size-options">
+                                <span>12 Oz: $45.00</span>
+                                <span>16 Oz: $55.00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1599639957043-f3aa5c986398?w=400" alt="Soyalatte">
+                        </div>
+                        <div class="card-content">
+                            <h4>Soyalatte</h4>
+                            <p class="size-options">
+                                <span>12 Oz: $45.00</span>
+                                <span>16 Oz: $55.00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400" alt="Chocolate Caliente">
+                        </div>
+                        <div class="card-content">
+                            <h4>Chocolate Caliente</h4>
+                            <p class="size-options">
+                                <span>12 Oz: $45.00</span>
+                                <span>16 Oz: $55.00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400" alt="Té">
+                        </div>
+                        <div class="card-content">
+                            <h4>Té</h4>
+                            <p class="price">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>El Kiosko</h3>
+                    <p>Energía y Sabor para tu Camino</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horario</h4>
+                    <p>Lunes a Viernes: 7:00 AM - 7:00 PM</p>
+                    <p>Sábado: 8:00 AM - 3:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ubicación</h4>
+                    <p>Campus Universitario</p>
+                    <p>Buenavista, México, MX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>¡Gracias por elegir El Kiosko! © 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* style.css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cyan: #00d4ff;
+            --blue: #1e3a8a;
+            --orange: #ff8800;
+            --pink: #ff00ff;
+            --yellow: #ffdd00;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #f1f5f9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .kiosko-icon {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--blue);
+        }
+
+        .logo-text h1 .orange {
+            color: var(--orange);
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: var(--yellow);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--cyan);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--cyan);
+            transition: 0.3s;
+        }
+
+        /* carousel.css */
+        .hero {
+            margin-top: 80px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 255, 0.1));
+            position: relative;
+        }
+
+        .carousel-item.active {
+            display: flex;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.2), transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.2), transparent 50%);
+            pointer-events: none;
+        }
+
+        .carousel-content {
+            flex: 1;
+            z-index: 2;
+            animation: slideInLeft 0.8s ease;
+        }
+
+        .carousel-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .carousel-content p {
+            font-size: 1.3rem;
+            color: var(--light);
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--cyan), var(--pink));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.4);
+        }
+
+        .carousel-image {
+            flex: 1;
+            z-index: 2;
+            animation: slideInRight 0.8s ease;
+        }
+
+        .carousel-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--cyan);
+            color: white;
+            font-size: 3rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0, 212, 255, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn.prev {
+            left: 20px;
+        }
+
+        .carousel-btn.next {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .carousel-indicators span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-indicators span.active {
+            background: var(--cyan);
+            width: 30px;
+            border-radius: 10px;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* menu.css */
+        .menu-section {
+            padding: 80px 0;
+            background: var(--dark);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+        }
+
+        .menu-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-left: 20px;
+            border-left: 4px solid var(--orange);
+            color: var(--yellow);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-grid-single {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .menu-card {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.8));
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            cursor: pointer;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+            border-color: var(--cyan);
+        }
+
+        .menu-card.featured {
+            border: 2px solid var(--orange);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .menu-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+            position: relative;
+        }
+
+        .card-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-content .description {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        .size-options {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .size-options span {
+            color: var(--cyan);
+            font-size: 1rem;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 40px 0 20px;
+            border-top: 2px solid var(--cyan);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: var(--cyan);
+            margin-bottom: 15px;
+        }
+
+        .footer-section h4 {
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            color: var(--gray);
+            margin-bottom: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            color: var(--gray);
+        }
+
+        /* responsive.css */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .carousel-item {
+                flex-direction: column;
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+            .carousel-content h2 {
+                font-size: 2rem;
+            }
+
+            .carousel-content p {
+                font-size: 1rem;
+            }
+
+            .carousel-image img {
+                max-width: 300px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid-single {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .menu-grid-single .menu-card {
+                max-width: 100%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 500px;
+            }
+
+            .carousel-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+
+    <script>
+        // main.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.offsetTop - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Animate cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.menu-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+
+        function scrollToCategory(category) {
+            const element = document.getElementById(category);
+            if (element) {
+                const offset = 100;
+                const targetPosition = element.offsetTop - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // carousel.js
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+
+        // Create indicators
+        const indicatorsContainer = document.querySelector('.carousel-indicators');
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('span');
+            if (i === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(i));
+            indicatorsContainer.appendChild(indicator);
+        }
+
+        const indicators = document.querySelectorAll('.carousel-indicators span');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+
+            currentSlide = (n + totalSlides) % totalSlides;
+
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        document.querySelector('.carousel-btn.next').addEventListener('click', nextSlide);
+        document.querySelector('.carousel-btn.prev').addEventListener('click', prevSlide);
+
+        // Auto advance slides
+        setInterval(nextSlide, 5000);
+
+        // Pause on hover
+        document.querySelector('.carousel').addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+
+        let autoSlide = setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
